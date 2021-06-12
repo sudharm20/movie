@@ -55,7 +55,6 @@ const styles = theme => ({
       color: theme.palette.primary.light,
   }
 });
-
 class Home extends Component {
   constructor() {
     super();
@@ -71,7 +70,6 @@ class Home extends Component {
         releaseDateEnd: ""
     }
 }
-
 movieNameChangeHandler = event => {
   this.setState({ movieName: event.target.value });
 }
@@ -95,8 +93,6 @@ releaseDateEndHandler = event => {
 movieClickHandler = (movieId) => {
   ReactDOM.render(<Details movieId={movieId} />, document.getElementById('root'));
 }
-
-
   render() {
     const { classes } = this.props;
     var filterMovie=moviesData.filter((movie)=>{
@@ -105,9 +101,7 @@ movieClickHandler = (movieId) => {
     if(this.state.movieName.length ===0  && this.state.artists.length === 0){
       filterMovie=moviesData;
     }
-    
-
-    return (
+      return (
       <div>
         <Header baseUrl={this.props.baseU} />
         <div id="upcoming">
